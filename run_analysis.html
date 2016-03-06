@@ -228,6 +228,14 @@ rm(x_tbl, y_tbl, subject_tbl)</code></pre>
   group_by(., subjectid, ActivityName, FeatureName) %&gt;%
   summarise(., AverageValue = mean(Value))</code></pre>
 </div>
+<div id="output-the-summary-table" class="section level2">
+<h2>5 - Output the summary table</h2>
+<pre class="r"><code>write.csv(tidysummary,
+          file = &quot;human_activity_summary.csv&quot;,
+          row.names = FALSE, col.names = TRUE)</code></pre>
+<pre><code>## Warning in write.csv(tidysummary, file = &quot;human_activity_summary.csv&quot;,
+## row.names = FALSE, : attempt to set 'col.names' ignored</code></pre>
+</div>
 </div>
 
 

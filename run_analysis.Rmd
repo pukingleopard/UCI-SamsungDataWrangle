@@ -119,3 +119,11 @@ tidysummary <- tidydata %>%
   group_by(., subjectid, ActivityName, FeatureName) %>%
   summarise(., AverageValue = mean(Value))
 ```
+
+## 5 - Output the summary table
+```{r}
+write.csv(tidysummary,
+          file = "human_activity_summary.csv",
+          row.names = FALSE)
+```
+
